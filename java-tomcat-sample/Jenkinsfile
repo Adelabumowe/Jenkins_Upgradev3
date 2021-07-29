@@ -17,5 +17,10 @@ pipeline {
 	        build job: 'Deploy_Application_Staging_Env'
 		}
 	    }
+	stage('Deploy to the Production Environment'){
+	    steps {
+		build job: 'Deploy_Application_Prod_Env'
+	    }
+	}
     }
 }
